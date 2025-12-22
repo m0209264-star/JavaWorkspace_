@@ -1,0 +1,145 @@
+package com.kh.chap01.ControlPractice;
+
+import java.util.Scanner;
+
+public class ControlPractice {
+	Scanner sc = new Scanner(System.in);
+	
+	public void practice1() {
+		System.out.println("1. 입력");
+		System.out.println("2. 수정");
+		System.out.println("3. 조회");
+		System.out.println("4. 삭제");
+		System.out.println("7. 종료");
+		System.out.print("메뉴 번호를 입력하세요 : ");
+		int menu = sc.nextInt();
+		
+		if(menu ==7) {
+			System.out.println("프로그램 종료");
+			return;
+		}
+		switch(menu) {
+		case 1: 
+			System.out.print("입력");
+			break;
+		case 2: 
+			System.out.print("수정");
+			break;
+		case 3: 
+			System.out.print("조회");
+			break;
+		case 4: 
+			System.out.print("삭제");
+			break;
+		case 7: 
+			System.out.println("프로그램이 종료됩니다.");
+			return;
+			// 메서드 내 어디서든 사용가능
+			// 현재 위치에서 메서드를 "종료"시키는 키워드
+			// break;
+		}
+		System.out.println(" 메뉴입니다.");
+	}
+	public void practice2() {
+		
+		System.out.println("숫자를 한 개 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		// 양수인지아닌지
+		// 가드조건문
+		// - 조건을 만족하지 않으면 즉시 종료하는 패턴
+		if(!(num > 0)) {
+			System.out.println("양수만 입력하세요");
+			return;
+		}
+		
+		//홀수인지 짝수인지
+		if(num % 2 == 1) {
+			System.out.println("홀수다");
+		}else {
+			System.out.println("짝수다");
+		}
+		
+	}
+	public void practice3() {
+		
+		System.out.println("국 :");
+		int kor = sc.nextInt();
+		
+		System.out.println("영 :");
+		int eng = sc.nextInt();
+		
+		System.out.println("수 :");
+		int math = sc.nextInt();
+		
+		int total = kor + eng + math;
+		double avg = total / 3.0;
+		
+		if(!(kor >= 40 && math >= 40 && eng >= 40 && avg >= 60)) {
+			System.out.println("불합격입니다.");
+			return;
+		}
+		System.out.println("합계 : " + total);
+		System.out.println("평균 : " + avg);
+		System.out.println("축하합니다, 합격입니다!");
+	}
+	public void practice4() {
+		System.out.println("1~12 사이의 정수 입력 : ");
+		int num = sc.nextInt();
+		
+		String season;
+		
+		switch(num) {
+		case 1, 2, 12 :
+			season = "겨울";
+			break;
+		case 3, 4, 5 :
+			season = "봄";
+			break;
+		case 6, 7, 8 :
+			season = "여름";
+			break;
+		case 9, 10, 11 :
+			season = "가을";
+			break;
+		default :
+			season = "해당하는 계절이 없습니다.";
+			System.out.println(num + "월은 잘못 입력된 달입니다.");
+			return;
+		}
+		System.out.println(num + "월은 " + season+ "입니다.");
+	}
+	
+	public void practice5() {
+		String realId = "minmin";
+		String realPwd = "Min1234";
+		
+		System.out.print("아이디 : ");
+		String id = sc.next();
+		
+		System.out.print("비밀번호 : ");
+		String pwd = sc.next();
+		
+		if(id.equals(realId) && pwd.equals(realPwd)) {
+			System.out.println("로그인 성공");
+			return;
+		}
+		
+		if(id.equals(realId)) {
+			System.out.println("아이디가 틀렸다");
+			return;
+		}
+		
+		if(pwd.equals(realPwd)) {
+			System.out.println("비밀번호가 틀렸다");
+			return;
+		}
+		
+		System.out.println("로그인 성공");
+		
+	}
+	public void practice6() {
+		System.out.print("권한을 확인하고자 하는 등급 : ");
+		char work = sc.nextChar();
+	}
+}
