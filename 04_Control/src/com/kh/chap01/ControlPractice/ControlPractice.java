@@ -84,7 +84,7 @@ public class ControlPractice {
 		System.out.println("축하합니다, 합격입니다!");
 	}
 	public void practice4() {
-		System.out.println("1~12 사이의 정수 입력 : ");
+		System.out.print("1~12 사이의 정수 입력 : ");
 		int num = sc.nextInt();
 		
 		String season;
@@ -140,6 +140,43 @@ public class ControlPractice {
 	}
 	public void practice6() {
 		System.out.print("권한을 확인하고자 하는 등급 : ");
-		char work = sc.nextChar();
+		
 	}
-}
+	public void practice7() {
+		System.out.print("키(m)를 입력해 주세요 : ");
+		double tall = sc.nextDouble();
+		
+		System.out.print("몸무게(kg)를 입력해 주세요 : ");
+		double height = sc.nextDouble();
+		
+		double bmi = height / (tall * tall);
+		System.out.println("BMI : " + bmi);
+		
+		if(bmi < 18.5) {
+			System.out.println("저체중");
+		}else if(bmi < 23) {
+			System.out.println("정상체중");
+		}else if(bmi <25) {
+			System.out.println("과체중");
+		}else if(bmi >30) {
+			System.out.println("비만");
+		}else {
+			System.out.println("고도 비만");
+		}
+	}
+	public void practice8() {
+		System.out.print("피연산자1 입력: ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("피연산자2 입력 : ");
+		int num2 = sc.nextInt();
+		
+		System.out.print("연산자를 입력(+,-,*,/,%) : ");
+		String operator = sc.next();
+		
+		switch(operator) {
+			
+		}
+	 }
+	
+	}
