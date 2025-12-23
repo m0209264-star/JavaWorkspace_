@@ -173,6 +173,67 @@ public class LoopPractice {
 		}
 	}
 	public void practice7() {
+		System.out.print("연산자(+, -, *, /, %, exit) : ");
 		
+		System.out.print("정수1 : ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("정수2 : ");
+		int num2 = sc.nextInt();
+		}
+	public void practice8() {
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for(int i = 1; i <= num; i++) {
+			for(int j =1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+			}
+		}
+	public void practice9() {
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for(int i =num; i>= 1; i--) {
+			for(int j =i; j>= 1; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
 		}
 	}
+	public void practice10() {
+		System.out.print("숫자 : ");
+		int num = sc.nextInt();
+		
+		if(num <2) {
+			System.out.print("잘못 입력하셨습니다.");
+			return;
+		}
+		int count = 0;
+		for(int i = 1; i <=num; i++) {
+			if(num % i ==0) {
+				count++;
+			}
+		}
+		if(count ==2) {
+			System.out.print("소수입니다.");
+		}else {
+			System.out.print("소수가 아닙니다.");
+		}
+	}
+	public void practice11() {
+		System.out.print("숫자 : ");
+		int num = sc.nextInt();
+		
+		if(num <2) {
+			System.out.print("잘못 입력하셨습니다.");
+			return;
+		}
+	}
+	public void practgce12() {
+		System.out.print("자연수 하나를 입력하세요 : ");
+		int num = sc.nextInt();
+	}
+}
