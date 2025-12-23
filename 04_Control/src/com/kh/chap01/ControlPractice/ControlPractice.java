@@ -142,7 +142,7 @@ public class ControlPractice {
 		System.out.print("권한을 확인하고자 하는 등급 : ");
 		String grade = sc.next();
 		
-		Switch(grade) {
+		switch(grade) {
 			case "관리자" : 
 				System.out.print("회원관리, 게시글관리, ");
 			case "회원" : 
@@ -175,18 +175,108 @@ public class ControlPractice {
 		}
 	}
 	public void practice8() {
-		System.out.print("피연산자1 입력: ");
+		
+		System.out.print("피연산자 1 : ");
 		int num1 = sc.nextInt();
 		
-		System.out.print("피연산자2 입력 : ");
+		System.out.print("피연산자 2 : ");
 		int num2 = sc.nextInt();
 		
-		System.out.print("연산자를 입력(+,-,*,/,%) : ");
-		String operator = sc.next();
+		System.out.print("연산자 입력 : ");
+		char ch = sc.next().charAt(0);
 		
-		switch(operator) {
-			
+		if(!(num1 > 0 && num2 >0 &&
+				(ch == '+' || ch == '-' || ch == '*' || ch =='/' || ch == '%')
+				)) {
+			System.out.println("잘못입력하셨습니다. 프로그램을 종료합니다.");
+			return;
 		}
-	 }
-	
+		
+		switch(ch) {
+		case '+' :
+			System.out.println(num1 + ch + num2+" = "+ (num1+num2));
+			break;
+		case '-' :
+			System.out.println(num1 + ch + num2+" = "+ (num1-num2));
+			break;
+		case '*' :
+			System.out.println(num1 + ch + num2+" = "+ (num1*num2));
+			break;
+		case '/' :
+			System.out.println(num1 + ch + num2+" = "+ (num1 /(double) num2));
+			break;
+		case '%' :
+			System.out.println(num1 + ch + num2+" = "+ (num1 % num2));
+			break;
 	}
+		}
+	public void practice9() {
+		System.out.print("중간 고사 점수 :");
+		int midTest = sc.nextInt();
+		
+		System.out.print("기말 고사 점수 :");
+		int finalTest = sc.nextInt();
+		
+		System.out.print("과제 점수 : ");
+		int report = sc.nextInt();
+		
+		System.out.print("출석 점수 : ");
+		int attend = sc.nextInt();
+		
+		double total = midTest * 0.2 + finalTest * 0.3 + report * 0.3 + attend;
+		
+		if(attend <= 14) {
+			System.out.println("Fail [출석 회수 부족("+attend+"/20)]");
+			return;
+		}
+		System.out.println("총점 :"+ total);
+		if(total < 70) {
+			System.out.println("FAIL");
+		}else {
+			System.out.println("PASS");
+		}
+	}
+	public void practice10() {
+		System.out.print("선택 : ");
+		int menu = sc.nextInt();
+		
+		switch(menu) {
+		case 1 :
+			practice1();
+			break;
+		case 2 :
+			practice2();
+			break;
+		case 3:
+			practice9();
+			break;
+		}
+	}
+	public void practice11() {
+		System.out.print("비밀번호 입력 : (1000 ~ 9999) : ");
+		int pwd = sc.nextInt();
+		
+		if(!(pwd >= 1000 && pwd <= 9999)) {
+			System.out.println("자리 수 안 맞음");
+			return;
+		}
+		
+		
+		int first = pwd / 1000; // 1234 / 1000 = 1.(234)
+		int second = pwd / 100 % 10; // 1234 / 100 => 12.(34) % 10 => 2
+		int third = pwd / 10 % 10; // 1234 / 10 => 123 % 10 => charAt(2)
+		int fourth = pwd % 10; // 1234 % 10 => 4 
+		
+		if(first == second || first == third || first == fourth
+				|| second == third || second == fourth || third == fourth) {
+			System.out.println("중복값 있음");
+		}else {
+			System.out.println("생성 성공");
+		}
+		
+	}
+	
+	
+}
+	
+	
