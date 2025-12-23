@@ -140,8 +140,18 @@ public class ControlPractice {
 	}
 	public void practice6() {
 		System.out.print("권한을 확인하고자 하는 등급 : ");
+		String grade = sc.next();
 		
+		Switch(grade) {
+			case "관리자" : 
+				System.out.print("회원관리, 게시글관리, ");
+			case "회원" : 
+				System.out.print("게시글작성, 댓글 작성, ");
+			case "비회원" :
+				System.out.print("게시글 조회");
+		}
 	}
+	
 	public void practice7() {
 		System.out.print("키(m)를 입력해 주세요 : ");
 		double tall = sc.nextDouble();
