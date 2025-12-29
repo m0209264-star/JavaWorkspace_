@@ -75,9 +75,9 @@ public class DimensionPractice {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("행 크기 : ");
-		int num = sc.nextInt();
+		int num1 = sc.nextInt();
 		
 		System.out.print("열 크기 : ");
-		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
 	}
 }
