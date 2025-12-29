@@ -21,6 +21,7 @@ public class B_While {
 		}
 		System.out.println(i);
 	}
+	
 	public void method2() {
 		//while문으로 5회 반복하여 아래 코드 출력
 		// 1 2 3 4 5
@@ -29,6 +30,7 @@ public class B_While {
 			System.out.print(i++ + " ");
 		}
 	}
+	
 	public void method3() {
 		//1부터 랜덤값(1~10)까지의 총 합계를 while문으로 작성
 		// 출력예시 : `1부터 xxx까지의 합계는 x입니다.
@@ -55,6 +57,7 @@ public class B_While {
 			System.out.println("하이!");
 		}while(false);
 	}
+	
 	public void method5() {
 		// do-while문을 활용하여
 		// 1 2 3 4 5 출력
