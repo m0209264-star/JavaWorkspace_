@@ -11,7 +11,7 @@ public class FieldTest3 {
 	public static String sta = "static 변수";
 	
 	// final : 상수를 정의하는 키워드
-	// 한번 지정된 값을 곶어에서 사용하기 위해 대부분의 static변수는 final예약어를
+	// 한번 지정된 값을 고정해서 사용하기 위해 대부분의 static변수는 final예약어를
 	// 함께 사용.
 	public static final double PI = 3.14;
 	

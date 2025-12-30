@@ -19,5 +19,8 @@ public class Run {
 		System.out.println(FieldTest3.PI); // 객체생성 불필요
 		// 객체를 생성하지 않아도, 이미 메모리에 저장공간이 할당된 상태이기 때문.
 		FieldTest3.test();
+	
+		FieldTest3 ft3 = new FieldTest3();
+		System.out.println(ft3.PI);
 	}
 }
