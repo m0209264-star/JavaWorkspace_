@@ -28,13 +28,53 @@ public class User {
 	
 	// 기본 생성자
 	//  - 생성자 미 작성시 JVM이 자동으로 만들어주는 생성자
+	//  - 되도록 항상 기본생성자를 추가하는 습관을 가질 것.
 	public User() {
 		System.out.println("기본생성자 호출");
 	}
 	
+	// 매개변수있는 생성자
+	// - 전달받은 매개변수를 통해 필드를 초기화할 목적으로 사용하는 생성자
+	public User(String userId) {
+		this.userId = userId;
+	}
 	
+	
+	// 매개변수있는 생성자2
+	public User(String userId, int age, char gender) {
+		// 다른 생성자에서 동일한 필드값을 초기화 하고 있는 경우,
+		// 현재 생성자에서 다른 생성자를 호출하는 방식으로 코드를 줄일 수 있다.
+		//this.userId = userId;
+		this(userId); // this생성자 호출(반드시 첫줄에 기술)
+		this.age = age;
+		this.gender = gender;
+	}
 	// 메서드부
+	// set/get메서드 생성
+	// 1. userId get/set
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 	
+	public String getUserId() {
+		return this.userId;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public int getAge() {
+		return this.age;
+	}
+	
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+	
+	public char setGender() {
+		return this.gender;
+	}
 }
 
 
