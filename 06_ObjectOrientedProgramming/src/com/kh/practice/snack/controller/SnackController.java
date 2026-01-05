@@ -10,8 +10,8 @@ public class SnackController {
 		
 	}
 	
-	public String saveData(String kind, String name, String flavor, 
-			int numOf, int price) {
+	public String saveData(String kind, String name, String flavor
+			, int numOf, int price) {
 		s.setKind(kind);
 		s.setName(name);
 		s.setFlavor(flavor);
@@ -21,11 +21,19 @@ public class SnackController {
 		return "저장완료";
 	}
 	
-	public String comfirmData() {
+	public String confirmData() {
 		return s.information();
 	}
 	
 }
+
+
+
+
+
+
+
+
 
 
 

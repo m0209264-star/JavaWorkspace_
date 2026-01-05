@@ -1,18 +1,20 @@
 package com.kh.chap05.constructor.model.vo;
 
+import com.kh.example.practice4.model.vo.Student;
+
 public class User {
-	// 필드부
+	//필드부
 	private String userId;
 	private int age;
 	private char gender;
 	
 	// 생성자부
-	/*
+	/* 
 	 * 생성자
-	 *  - 객체를 생성하는 기능을 담당 
+	 *  - 객체를 생성하는 기능을 담당
 	 * [표현법]
-	 * public 클래스명 ([매개변수]){
-	 * 	// 생성자를 통해 객체 생성시 실행할 코드
+	 * public 클래스명([매개변수]){
+	 *  // 생성자를 통해 객체 생성시 실행할 코드
 	 * }
 	 * 
 	 * 생성자를 작성하는 목적
@@ -23,8 +25,8 @@ public class User {
 	 * 1. 클래스명과 동일해야한다(대/소문자 포함)
 	 * 2. 반환형이 존재하지 않는다.
 	 * 3. 여러개 생성이 가능하지만, 매개변수가 중복되면 안된다(메서드 오버로딩과 동일한 개념)
-	 * 4. 매개변수 생성자를 명시적으로 작성하게 되면, 기본생성자를 JVM이 만들어주지 않는다.
-	 */ 
+	 * 4. 매개변수 생성자를 명시적으로 작성하게 되면, 기본생성자를 jvm이 만들어주지 않는다.
+	 * */
 	
 	// 기본 생성자
 	//  - 생성자 미 작성시 JVM이 자동으로 만들어주는 생성자
@@ -34,18 +36,17 @@ public class User {
 	}
 	
 	// 매개변수있는 생성자
-	// - 전달받은 매개변수를 통해 필드를 초기화할 목적으로 사용하는 생성자
+	//  - 전달받은 매개변수를 통해 필드를 초기화할 목적으로 사용하는 생성자
 	public User(String userId) {
 		this.userId = userId;
 	}
-	
 	
 	// 매개변수있는 생성자2
 	public User(String userId, int age, char gender) {
 		// 다른 생성자에서 동일한 필드값을 초기화 하고 있는 경우,
 		// 현재 생성자에서 다른 생성자를 호출하는 방식으로 코드를 줄일 수 있다.
 		//this.userId = userId;
-		this(userId); // this생성자 호출(반드시 첫줄에 기술)
+		this(userId); // this생성자 호출(반드시 첫줄에 기술)		
 		this.age = age;
 		this.gender = gender;
 	}
@@ -55,7 +56,6 @@ public class User {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	
 	public String getUserId() {
 		return this.userId;
 	}
@@ -72,10 +72,19 @@ public class User {
 		this.gender = gender;
 	}
 	
-	public char setGender() {
+	public char getGender() {
 		return this.gender;
 	}
+	
 }
+
+
+
+
+
+
+
+
 
 
 

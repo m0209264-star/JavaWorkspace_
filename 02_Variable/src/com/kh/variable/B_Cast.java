@@ -1,18 +1,19 @@
 package com.kh.variable;
+
 public class B_Cast {
 	/*
 	 * (자료)형변환 : 값의 자료형을 바꾸는 개념
-	 *
+	 *  
 	 * 컴퓨터의 값 처리 규칙
 	 * 1. 값 끼리 연산할때는 항상 같은 자료형으로만 연산해야 한다.
 	 *    =(대입연산자)도 마찬가지로 왼쪽과 오른쪽 값이 같아야함.
-	 *    만약, 왼쪽 오른쪽의 자료형이 서로 다르다면, 한쪽을 형변환 해줘야한다.
-	 *
+	 *    만약, 왼쪽 오른쪽의 자료형이 서로 다르다면, 한쪽을 형변환 해줘야한다. 
+	 * 
 	 * 형변환의 종류
-	 * 1. 자동형변환
+	 * 1. 자동형변환 
 	 *  - 자동으로 형변환이 진행되기 때문에 내가 직접 형변환할 필요가 없다.
 	 *  - 작은바이트의 자료형 => 큰바이트의 자료형
-	 *
+	 *  
 	 * 2. 강제형변환
 	 *  - 자동형변환이 불가능한 경우, 내가 직접 형변환 연산잘르 사용하여 변환
 	 *  - 큰바이트의 자료형 => 작은바이트의 자료형
@@ -61,6 +62,29 @@ public class B_Cast {
 		byte b3 = (byte)(b1 + b2);
 	}
 	
+	public void forceCasting() {
+		
+		// 1. double -> float
+		float f1 = 4.0f;
+		
+		double d2 = 8.0;
+		float f2 = (float) d2;
+		
+		// 2. double -> int
+		double d3 = 10.89;
+		int i3 = (int) d3;
+		System.out.println("i3 : " + i3);
+		
+		int iNum = 10;
+		double dNum = 5.89;
+		
+		//int iSum = iNum + dNum;
+		// 해결방법 1. 연산결과를 int에 맞춰 강제형변환
+		int iSum = (int)(iNum + dNum);
+		
+		// 해결방법 2. 덧셈 연산 전에 dNum을 int로 강제형변환
+		int iSum2 = iNum + (int)dNum;
+	}
 	
 	
 	
@@ -72,4 +96,4 @@ public class B_Cast {
 	
 	
 	
-}
+}	

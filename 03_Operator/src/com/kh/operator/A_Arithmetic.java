@@ -1,7 +1,9 @@
 package com.kh.operator;
 
 public class A_Arithmetic {
-
+	
+	// 산술연산자
+	// * / % + -
 	public void method() {
 		int num1 = 10;
 		int num2 = 3;
@@ -14,6 +16,7 @@ public class A_Arithmetic {
 	}
 	
 }
+
 
 
 

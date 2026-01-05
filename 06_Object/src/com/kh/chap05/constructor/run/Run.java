@@ -9,12 +9,19 @@ public class Run {
 		
 		User u2 = new User("user01");
 		
-		User u3 = new User("user03", 30, 'M');
+		User u3 = new User("user03" , 30, 'M');
 		System.out.println(u3.getUserId());
 		System.out.println(u3.getAge());
-		System.out.println(u3.setGender());
+		System.out.println(u3.getGender());
 	}
 }
+
+
+
+
+
+
+
 
 
 

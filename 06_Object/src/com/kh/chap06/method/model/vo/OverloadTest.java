@@ -7,22 +7,22 @@ public class OverloadTest {
 	 *  - 단, 매개변수의 자료형, 개수 순서를 다르게 작성해줘야 한다.
 	 *  - 그 외, 매개변수의 이름이나, 접근제한자, 반환형은 다르더라도 메서드 오버로딩에
 	 *  영향을 주지 않는다.
-	 */
+	 *  */
 	
 	public void test() {
 		
 	}
-	
+		
 	public void test(int a) {
 		
 	}
 	
-	// 매개변수이름은 서로 다르더라도, 자료형이 같이 때문에 똑같은 메서드로 취급한다.
+	// 매개변수이름은 서로 다르더라도, 자료형이 같기 때문에 똑같은 메서드로 취급한다.
 //	public void test(int b) {
 //		
 //	}
 	
-	// 매개변수의 개수는 위와 동일하지만, 자료형이 다르므로 다르 메서드로 취급한다.
+	// 매개변수의 개수는 위와 동일하지만, 자료형이 다르므로 다른 메서드로 취급한다.
 	public void test(String a) {
 		
 	}
@@ -31,10 +31,11 @@ public class OverloadTest {
 		
 	}
 	
-	// 자료형의 순서가 다르기 때문에 메서드 오버로딩에 적용
+	// 자료형의 순서가 다르기 대문에 메서드 오버로딩이 적용
 	public void test(String b, int a) {
 		
 	}
+	
 	// 접근제한자는 오버로딩에 영향을 주지 않는다.
 //	private void test(String b, int a) {
 //		
@@ -45,6 +46,16 @@ public class OverloadTest {
 //		return 1;
 //	}
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

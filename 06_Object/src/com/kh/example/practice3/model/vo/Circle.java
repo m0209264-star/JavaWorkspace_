@@ -13,10 +13,29 @@ public class Circle {
 	}
 	
 	public void getAreaOfCircle() {
-		System.out.println(radius * 2 * PI);
+		// 원둘레
+		System.out.println(2 * PI * radius);
 	}
 	
 	public void getSizeOfCircle() {
-		System.out.println(radius * radius * PI);
+		System.out.println(PI * radius * radius);
 	}
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

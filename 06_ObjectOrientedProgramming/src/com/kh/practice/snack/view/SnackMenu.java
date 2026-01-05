@@ -7,7 +7,6 @@ import com.kh.practice.snack.controller.SnackController;
 // 입/출력 담당
 public class SnackMenu {
 	private Scanner sc = new Scanner(System.in);
-	
 	private SnackController scr = new SnackController();
 	
 	public void menu() {
@@ -29,19 +28,28 @@ public class SnackMenu {
 		int price = sc.nextInt();
 		
 		System.out.println(scr.saveData(kind, name, flavor, numOf, price));
-		// 저장가능 필요
+		// 저장기능 필요
 		
-		System.out.print("저장한 정보를 확인하겠습니까?(y/n) : ");
+		System.out.print("저장한 정보를 확인하시겠습니까?(y/n) : ");
 		char ch = sc.next().charAt(0);
 		if(ch == 'y' || ch == 'Y') {
-			// 상품정보 출력
-			String result = scr.comfirmData();
+			//상품정보 출력
+			String result = scr.confirmData();
 			System.out.println(result);
 		}
 		
 	}
-
+	
+	
 }
+
+
+
+
+
+
+
+
 
 
 

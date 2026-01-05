@@ -25,8 +25,7 @@ public class Snack {
 				+"개 "+price+"원";
 		return result;
 	}
-	
-	// getter / setter
+	// getter / setter들
 	public void setKind(String kind) {
 		this.kind = kind;
 	}
@@ -40,7 +39,7 @@ public class Snack {
 	}
 	
 	public String getName() {
-		return this.name;
+		return name;
 	}
 	
 	public void setFlavor(String flavor) {
@@ -48,7 +47,7 @@ public class Snack {
 	}
 	
 	public String getFlavor() {
-		return this.flavor;
+		return flavor;
 	}
 	
 	public void setNumOf(int numOf) {
@@ -56,7 +55,7 @@ public class Snack {
 	}
 	
 	public int getNumOf() {
-		return this.numOf;
+		return numOf;
 	}
 	
 	public void setPrice(int price) {
@@ -64,9 +63,19 @@ public class Snack {
 	}
 	
 	public int getPrice() {
-		return this.price;
+		return price;
 	}
+	
 }
+
+
+
+
+
+
+
+
+
 
 
 

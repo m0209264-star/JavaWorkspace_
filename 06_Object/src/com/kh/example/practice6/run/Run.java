@@ -7,13 +7,25 @@ public class Run {
 		Book b1 = new Book();
 		b1.inform();
 		
-		Book b2 = new Book("자바기초", "abc", "abc");
+		Book b2 = new Book("자바의 정석","이지퍼블리싱","서우성");
 		b2.inform();
 		
-		Book b3 = new Book("자바기초", "abc", "abc", 20000, 0.5);
+		Book b3 = new Book("자바의 정석","이지퍼블리싱","서우성", 15000, 0.5);
 		b3.inform();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

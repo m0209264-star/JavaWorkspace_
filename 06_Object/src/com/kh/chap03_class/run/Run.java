@@ -4,8 +4,8 @@ import com.kh.chap03_class.model.vo.Person;
 
 public class Run {
 	public static void main(String[] args) {
-		Person p = new Person ();
-		p.changeName("승주");
+		Person p = new Person();
+		p.changeName("경민");
 		p.printName();
 	}
 }

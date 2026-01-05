@@ -13,8 +13,8 @@ public class Student {
 	
 	{
 		classroom = 3;
-		name ="문승주";
-		height = 170.0;
+		name ="민경민";
+		height = 180;
 		gender = 'M';
 	}
 	
@@ -24,7 +24,18 @@ public class Student {
 	
 	public void information() {
 		System.out.println(grade+", "+classroom+", "+name+", "+
-				height+", "+gender+" ");
-		
+	height+", "+gender);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
