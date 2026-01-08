@@ -46,6 +46,8 @@ public class LibraryMenu {
 			case 9:
 				System.out.println("프로그램을 종료합니다.");
 				return;
+			default:
+				System.out.println("잘못입력했습니다.");
 			}
 		}
 	}

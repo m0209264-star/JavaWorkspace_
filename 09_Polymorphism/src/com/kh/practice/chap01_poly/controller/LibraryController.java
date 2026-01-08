@@ -31,12 +31,19 @@ public class LibraryController {
 	
 	public Book[] searchBook(String keyword) {
 		Book[] searchList = new Book[5];
-		int count = 0;
-		for(int i =0; i<bList.length; i++) {
-			if(bList[i].getTitle().contains(keyword)) {
-				searchList[count++] = bList[i];
+		
+		int index = 0;
+		for(Book b : bList) {
+			if(b.getTitle().equals(keyword)) {
+				// keyword가 포함된 도서.
+				searchList[index++] = b;
 			}
 		}
+		//for(int i =0; i<bList.length; i++) {
+			//if(bList[i].getTitle().contains(keyword)) {
+			//	searchList[count++] = bList[i];
+			//}
+		//}
 		return searchList;
 	}
 	

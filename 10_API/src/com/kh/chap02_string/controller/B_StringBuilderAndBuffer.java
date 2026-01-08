@@ -15,7 +15,7 @@ public class B_StringBuilderAndBuffer {
 		String str = "Hello";
 		str += "World";
 		
-		StringBuilder sb1 = new StringBuilder();
+		StringBuilder sb1 = new StringBuilder("hello");
 		sb1.append("World"); // 같은 저장공간에서 이어쓰기 가능
 		sb1.append("!!!"); // 주소값 1개만 사용.
 		
