@@ -11,6 +11,7 @@ public class FileController {
 	}
 	
 	public void fileSave(String file, StringBuilder sb) {
+		
 		String s = sb.toString();
 		fd.fileSave(file, s);
 	}
@@ -20,7 +21,6 @@ public class FileController {
 	}
 	
 	public void fileEdit(String file, StringBuilder sb) {
-		String s = sb.toString();
-		fd.fileEdit(file, s);
+		fd.fileEdit(file, sb.toString());
 	}
 }
