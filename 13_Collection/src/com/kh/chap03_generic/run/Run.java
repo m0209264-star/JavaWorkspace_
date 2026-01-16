@@ -87,10 +87,26 @@ public class Run {
 		// 한 상황이 생긴다.
 //		unknown2.setType(new Child2());
 		
+		// unknown2가 Child1이든 Child2든, Parent든, 다형성에 의해 값을 추출하여 대입 가능.
+		// 즉, extends를 통한 상한제한은 데이터를 "가져올 때" 자주 사용한다.
+		Parent p = unknown2.getType();
 		
+		// 2) super를 통한 와일드카드 범위 하한 제한
+		// ? super Parent : 와일드카드의 범위는 최하 Parent부터 최상 Object
+		GenericExtends<? super Parent> unknown3 = new GenericExtends<>();
+		// ? 의 현재 범위 : Parent, Object
 		
+		unknown3.setType(new Parent()); 
+		unknown3.setType(new Child1()); // 다형성의 업캐스팅으로 문제 없이 저장 가능.
+		unknown3.setType(new Child2());
+		// 값을 "대입"하고자 할때는 super를 통한 하한제한을 사용하는 것이 적절하다.
+		
+		Parent p3 = unknown3.getType(); // ?는 Object일 수 있음. 단, 클래스레벨 제레닉 설정시
+		// T extends Parent로 설정했기 때문에 T의 범위는 Parent ~ Parent의 자식클래스로 한정.
+		
+		// 따라서 타입변수에 Extends를 통한 타입제한이 없는 경우, 데이터는 항상 Object형태로만 추출이 가능.
+		Object o3 = unknown3.getType();	
 	}
-	
 }
 
 
